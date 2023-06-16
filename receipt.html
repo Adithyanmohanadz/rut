@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <!-- base:css -->
+    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="images/" />
+
+    <style>
+        .mobbg {
+            background-color: #162b7e;
+        }
+
+        @media (max-width:550px) {
+            .mobbg {
+                background-color: #fff;
+            }
+        }
+
+        .form-control {
+            border: 1px solid #afafaf !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-scroller d-flex">
+        <div class="container-fluid page-body-wrapper full-page-wrapper d-flex">
+            <div class="content-wrapper d-flex align-items-center auth px-0 mob bg">
+                <div class="row w-100 mx-0">
+                    <div class="col-lg-4 mx-auto">
+                        <div class="auth-form-light text-left py-3 px-2  rounded-1">
+
+                            <div class="row px-4">
+                                <a href="index.html"><i class="mdi mdi-arrow-left mt-1 mr-2 h2" style="color: cornflowerblue;"></i></a>
+                                <i class="mdi mdi-file-document-box mt-1 mr-2 h2" style="color: cornflowerblue;"></i>
+                                <h4 class="h1">Receipt</h4>
+                            </div>
+
+                            <div class="mt-3 row px-4">
+                                <h6>Receipt No:-00000</h6>
+                                <h6 class="ml-auto">Date:-00/00/000 </h6>
+                            </div>
+
+                            <button type="button"
+                                class="btn btn-block btn-outline-primary  font-weight-bold auth-form-btn mt-3"
+                                data-toggle="modal" data-target="#exampleModalCenter">Select
+                                Customer</button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Search Customer</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Search Customer"
+                                                    aria-label="Search Customer" aria-describedby="basic-addon2">
+                                                <div class="input-group-append">
+                                                    <button class="btn btn-outline-secondary text-primary type="
+                                                        button">Search</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="table-responsive">
+                                                <table class="table table-striped">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                User
+                                                            </th>
+                                                            <th>
+                                                                Name
+                                                            </th>
+                                                            <th class="text-center">
+                                                                Select
+                                                            </th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="py-1">
+                                                                <img src="../../images/faces/face1.jpg" alt="image" />
+                                                            </td>
+                                                            <td>
+                                                                Herman Beck
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <a href=""><button type="button"
+                                                                        class="btn btn-success btn-rounded btn-fw">Select</button></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="py-1">
+                                                                <img src="../../images/faces/face2.jpg" alt="image" />
+                                                            </td>
+                                                            <td>
+                                                                Messsy Adam
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <a href=""><button type="button"
+                                                                        class="btn btn-success btn-rounded btn-fw">Select</button></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="py-1">
+                                                                <img src="../../images/faces/face3.jpg" alt="image" />
+                                                            </td>
+                                                            <td>
+                                                                John Richards
+                                                            </td>
+                                                            <td class="text-center">
+                                                                <a href=""><button type="button"
+                                                                        class="btn btn-success btn-rounded btn-fw">Select</button></a>
+                                                            </td>
+                                                        </tr>
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="my-3 text-center">
+                                <h4>Customer Name</h4>
+                            </div>
+
+                            <div class="my-4 ">
+
+                                <h4>Collection Method</h4>
+
+                                <div class="form-group row">
+
+                                    <div class="col-4 ">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="Radios" id="Radios1"
+                                                    value="" checked>
+                                                OB
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="Radios" id="Radios2"
+                                                    value="option2">
+                                                Paying Collection
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="Radios" id="Radios2"
+                                                    value="option2">
+                                                Chitty
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="form-group">
+                                    <label>Amount</label>
+                                    <input type="number" class="form-control" id="" placeholder="Amount">
+                                </div>
+                                <div class="form-group">
+                                    <label> Narration</label>
+                                    <input type="text" class="form-control" id="" placeholder="Narration">
+                                </div>
+                            </div>
+                            <div class="row justify-content-between px-5">
+                                <a href="index.html"><button type="button" class="btn btn-primary">Save</button></a>
+                                <a href="index.html"> <button type="button "
+                                        class="btn btn-secondary ">Cancel</button></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- content-wrapper ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+    <!-- base:js -->
+    <script src="vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- inject:js -->
+    <script src="js/off-canvas.js"></script>
+    <script src="js/hoverable-collapse.js"></script>
+    <script src="js/template.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>

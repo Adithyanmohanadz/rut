@@ -43,9 +43,13 @@
                         <div class="auth-form-light text-left py-3 px-2  rounded-1">
 
                             <div class="row px-4">
-                                <a href="index.html"><i class="mdi mdi-arrow-left mt-1 mr-2 h2" style="color: cornflowerblue;"></i></a>
+                                <a href="index.html"><i class="mdi mdi-arrow-left mt-1 mr-2 h2"
+                                        style="color: cornflowerblue;"></i></a>
                                 <i class="mdi mdi-account mt-1 mr-2 h2" style="color: cornflowerblue;"></i>
                                 <h4 class="h1">Customer</h4>
+                                <a class="ml-auto mt-1" href="index.html"><i
+                                        class="mdi mdi-account-multiple-plus text-danger mr-2 h2"
+                                        style="color: cornflowerblue;"></i></a>
                             </div>
 
                             <div class=" my-3 mx-2">
@@ -66,7 +70,7 @@
                                                     User
                                                 </th>
                                                 <th>
-                                                     Name
+                                                    Name
                                                 </th>
                                                 <th class="text-center">
                                                     OB
@@ -74,49 +78,64 @@
                                                 <th class="text-center">
                                                     Mobile Number
                                                 </th>
+                                                <th class="text-center">
+                                                    Leadger
+                                                </th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td class="py-1">
-                                                    <img src="../../images/faces/face1.jpg" alt="image" />
+                                                    <img src="images/faces/face1.jpg" alt="image" />
                                                 </td>
                                                 <td>
                                                     Herman Beck
                                                 </td>
                                                 <td class="text-center">
-                                                    ob                                                    
+                                                    ob
                                                 </td>
                                                 <td class="text-center">
-                                                    +00 0000 000 000                                                  
+                                                    +00 0000 000 000
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" data-toggle="modal" data-target="#Leadger"
+                                                        class="btn btn-success btn-rounded btn-fw">Show</button>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="py-1">
-                                                    <img src="../../images/faces/face2.jpg" alt="image" />
+                                                    <img src="images/faces/face2.jpg" alt="image" />
                                                 </td>
                                                 <td>
                                                     Messsy Adam
                                                 </td>
                                                 <td class="text-center">
-                                                    ob                                                    
+                                                    ob
                                                 </td>
                                                 <td class="text-center">
-                                                    +00 0000 000 000                                                  
+                                                    +00 0000 000 000
+                                                </td>
+                                                <td class="text-center">
+                                                    <a href=""><button type="button"
+                                                            class="btn btn-success btn-rounded btn-fw">Show</button></a>
                                                 </td>
                                             </tr>
                                             <tr>
                                                 <td class="py-1">
-                                                    <img src="../../images/faces/face3.jpg" alt="image" />
+                                                    <img src="images/faces/face3.jpg" alt="image" />
                                                 </td>
                                                 <td>
                                                     John Richards
                                                 </td>
                                                 <td class="text-center">
-                                                    ob                                                    
+                                                    ob
                                                 </td>
                                                 <td class="text-center">
-                                                    +00 0000 000 000                                                  
+                                                    +00 0000 000 000
+                                                </td>
+                                                <td class="text-center">
+                                                    <a href=""><button type="button"
+                                                            class="btn btn-success btn-rounded btn-fw">Show</button></a>
                                                 </td>
                                             </tr>
 
@@ -125,17 +144,101 @@
                                     </table>
                                 </div>
                             </div>
-                    
-                            
 
-                            
 
-                          
+                            <!-- Modal -->
+                            <div class="modal fade" id="Leadger" tabindex="-1" role="dialog" aria-labelledby="Leadger"
+                                aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Leadger</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="table-responsive">
+                                                <table class="table  ">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>
+                                                                sl.no
+                                                            </th>
+                                                            <th>
+                                                                route and bill
+                                                            </th>
+                                                            <th>
+                                                                bill no:-
+                                                            </th>
+                                                            <th class="text-center">
+                                                                place
+                                                            </th>
+                                                            <th class="text-center">
+                                                                in
+                                                            </th>
+                                                            <th class="text-center">
+                                                                out
+                                                            </th>
+                                                            <th class="text-center">
+                                                                Balance
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                        <tr>
+                                                            <td rowspan="2">1</td>
+                                                            <td>bill</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>route</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        </tr>
+                                                        <tr>
+                                                            <tr>
+                                                                <td rowspan="2">2</td>
+                                                                <td>bill</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>route</td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                                <td></td>
+                                                            </tr>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-                            
 
-                           
-                            
+
+
+
+
+
+
 
 
                         </div>

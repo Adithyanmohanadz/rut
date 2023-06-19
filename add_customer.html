@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <!-- base:css -->
+    <link rel="stylesheet" href="vendors/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- endinject -->
+    <link rel="shortcut icon" href="images/" />
+
+    <style>
+        .mobbg {
+            background-color: #162b7e;
+        }
+
+        @media (max-width:550px) {
+            .mobbg {
+                background-color: #fff;
+            }
+        }
+
+        .form-control {
+            border: 1px solid #afafaf !important;
+        }
+
+
+
+
+        .profile-pic-wrapper {
+            /* hei ght: 100vh;
+  w idth: 100%; */
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pic-holder {
+            text-align: center;
+            position: relative;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .pic-holder .pic {
+            height: 100%;
+            width: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            -o-object-position: center;
+            object-position: center;
+        }
+
+        .pic-holder .upload-file-block,
+        .pic-holder .upload-loader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(90, 92, 105, 0.7);
+            color: #f8f9fc;
+            font-size: 12px;
+            font-weight: 600;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .pic-holder .upload-file-block {
+            cursor: pointer;
+        }
+
+        .pic-holder:hover .upload-file-block,
+        .uploadProfileInput:focus~.upload-file-block {
+            opacity: 1;
+        }
+
+        .pic-holder.uploadInProgress .upload-file-block {
+            display: none;
+        }
+
+        .pic-holder.uploadInProgress .upload-loader {
+            opacity: 1;
+        }
+
+        /* Snackbar css */
+        .snackbar {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 14px;
+            transform: translateX(-50%);
+        }
+
+        .snackbar.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+
+        @-webkit-keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-scroller d-flex">
+        <div class="container-fluid page-body-wrapper full-page-wrapper d-flex">
+            <div class="content-wrapper d-flex align-items-center auth px-0 mob bg">
+                <div class="row w-100 mx-0">
+                    <div class="col-lg-4 mx-auto">
+                        <div class="auth-form-light text-left py-3 px-2  rounded-1">
+
+                            <div class="row px-4">
+                                <a href="index.html"><i class="mdi mdi-arrow-left mt-1 mr-2 h2"
+                                        style="color: cornflowerblue;"></i></a>
+                                <i class="mdi mdi-account mt-1 mr-2 h2" style="color: cornflowerblue;"></i>
+                                <h4 class="h1">Add Customer</h4>
+
+                            </div>
+
+                            <div class=" my-3 mx-2">
+
+                                <div class="mt-4">
+
+                                    <div class="profile-pic-wrapper">
+                                        <div class="pic-holder">
+                                            <!-- uploaded pic shown here -->
+                                            <img id="profilePic" class="pic" src="images/user.png">
+
+                                            <Input class="uploadProfileInput" type="file" name="profile_pic"
+                                                id="newProfilePhoto" accept="image/*" style="opacity: 0;" />
+                                            <label for="newProfilePhoto" class="upload-file-block">
+                                                <div class="text-center">
+                                                    <div class="mb-2">
+                                                        <i class="fa fa-camera fa-2x"></i>
+                                                    </div>
+                                                    <div class="text-uppercase">
+                                                        Update <br /> Profile Photo
+                                                    </div>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Customer Name</label>
+                                        <input type="number" class="form-control" id="" placeholder="Customer Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Mobile Number</label>
+                                        <input type="tel" class="form-control" id="" placeholder="Mobile Number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Address</label>
+                                        <input type="text" class="form-control" id="" placeholder="Address">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Amount</label>
+                                        <input type="number" class="form-control" id="" placeholder="Amount">
+                                    </div>
+                                    <div class="form-group">
+                                        <label> Narration</label>
+                                        <input type="text" class="form-control" id="" placeholder="Narration">
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-between px-5">
+                                    <a href="index.html"> <button type="button "
+                                            class="btn btn-secondary ">Cancel</button></a>
+                                    <a href="index.html"><button type="button" class="btn btn-primary">Save</button></a>
+    
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- content-wrapper ends -->
+            </div>
+            <!-- page-body-wrapper ends -->
+        </div>
+
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+
+        <script>
+            $(document).on("change", ".uploadProfileInput", function () {
+                var triggerInput = this;
+                var currentImg = $(this).closest(".pic-holder").find(".pic").attr("src");
+                var holder = $(this).closest(".pic-holder");
+                var wrapper = $(this).closest(".profile-pic-wrapper");
+                $(wrapper).find('[role="alert"]').remove();
+                triggerInput.blur();
+                var files = !!this.files ? this.files : [];
+                if (!files.length || !window.FileReader) {
+                    return;
+                }
+                if (/^image/.test(files[0].type)) {
+                    // only image file
+                    var reader = new FileReader(); // instance of the FileReader
+                    reader.readAsDataURL(files[0]); // read the local file
+
+                    reader.onloadend = function () {
+                        $(holder).addClass("uploadInProgress");
+                        $(holder).find(".pic").attr("src", this.result);
+                        $(holder).append(
+                            '<div class="upload-loader"><div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div></div>'
+                        );
+
+                        // Dummy timeout; call API or AJAX below
+                        setTimeout(() => {
+                            $(holder).removeClass("uploadInProgress");
+                            $(holder).find(".upload-loader").remove();
+                            // If upload successful
+                            if (Math.random() < 0.9) {
+                                $(wrapper).append(
+                                    '<div class="snackbar show" role="alert"><i class="fa fa-check-circle text-success"></i> Profile image updated successfully</div>'
+                                );
+
+                                // Clear input after upload
+                                $(triggerInput).val("");
+
+                                setTimeout(() => {
+                                    $(wrapper).find('[role="alert"]').remove();
+                                }, 3000);
+                            } else {
+                                $(holder).find(".pic").attr("src", currentImg);
+                                $(wrapper).append(
+                                    '<div class="snackbar show" role="alert"><i class="fa fa-times-circle text-danger"></i> There is an error while uploading! Please try again later.</div>'
+                                );
+
+                                // Clear input after upload
+                                $(triggerInput).val("");
+                                setTimeout(() => {
+                                    $(wrapper).find('[role="alert"]').remove();
+                                }, 3000);
+                            }
+                        }, 1500);
+                    };
+                } else {
+                    $(wrapper).append(
+                        '<div class="alert alert-danger d-inline-block p-2 small" role="alert">Please choose the valid image.</div>'
+                    );
+                    setTimeout(() => {
+                        $(wrapper).find('role="alert"').remove();
+                    }, 3000);
+                }
+            });
+        </script>
+        <!-- container-scroller -->
+        <!-- base:js -->
+        <script src="vendors/js/vendor.bundle.base.js"></script>
+        <!-- endinject -->
+        <!-- inject:js -->
+        <script src="js/off-canvas.js"></script>
+        <script src="js/hoverable-collapse.js"></script>
+        <script src="js/template.js"></script>
+        <!-- endinject -->
+</body>
+
+</html>
